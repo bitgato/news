@@ -10,7 +10,7 @@ A simple python script that scrapes headlines and text articles from
 
 #### articles
 <p align="center">
-  <img src="screenshots/headlines.png">
+  <img src="screenshots/articles.png">
 </p>
 
 ### libraries
