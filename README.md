@@ -4,14 +4,10 @@ A simple python script that scrapes headlines and text articles from
 
 ### screenshots
 #### headlines
-<p align="center">
-  <img src="screenshots/headlines.png">
-</p>
+![Headlines](/screenshots/headlines.png)
 
 #### articles
-<p align="center">
-  <img src="screenshots/article.png">
-</p>
+![Article](/screenshots/article.png)
 
 ### libraries
 * [termcolor](https://pypi.org/project/termcolor/)
