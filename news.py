@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import textwrap
 import argparse
+import urllib.request
 from termcolor import cprint
 from termcolor import colored
 from urllib import request
@@ -37,7 +38,9 @@ class News(object):
             self.url = "https://www.indiatoday.in/education-today/news"
 
     def get_news(self):
-        with request.urlopen(self.url) as page:
+        req = urllib.request.Request(self.url)
+        with urllib.request.urlopen(req) as response:
+            page = response.read()
             content = BeautifulSoup(page, features="lxml")
             divs = content.find_all("div", class_="catagory-listing")
             for div in divs:
@@ -56,7 +59,9 @@ class News(object):
                 self.links.append(link)
 
     def get_article(self, index):
-        with request.urlopen(self.links[index]) as page:
+        req = urllib.request.Request(self.links[index])
+        with urllib.request.urlopen(req) as response:
+            page = response.read()
             print()
             content = BeautifulSoup(page, features="lxml")
             divs = content.find_all("div", class_="description")
